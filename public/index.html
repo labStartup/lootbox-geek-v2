@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Loot Box Geek | Website</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="interface">
+        <section class="logo">
+          <img
+            src="./img/global/logo-removebg-preview.png"
+            alt="logotipo"
+            id="logo_header"
+          />
+        </section>
+
+        <section class="menu-desktop">
+          <nav>
+            <ul>
+              <li><a href="index.html">início</a></li>
+              <li><a href="#">destaques</a></li>
+              <li><a href="#">eventos</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section class="btn-modal">
+          <button class="open-modal btn-default" data-modal="modal-1">
+            <a href="#">login</a>
+          </button>
+
+          <button class="open-modal btn-default" data-modal="modal-2">
+            <a href="#">cadastre-se</a>
+          </button>
+        </section>
+      </div>
+    </header>
+    <!-- /navbar -->
+
+    <!-- modal para form de login -->
+    <dialog id="modal-1">
+      <div class="modal-container">
+        <section class="title">
+          <h1>Login</h1>
+          <button class="close-modal" data-modal="modal-1">x</button>
+        </section>
+
+        <section class="form">
+          <form action="../src/testLogin.php" method="post" id="">
+            <!-- email -->
+            <label for="email">E-mail </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="Seu melhor e-mail"
+              maxlength="25"
+            />
+
+            <!-- senha -->
+            <label for="senha">Senha </label>
+            <input
+              type="password"
+              name="senha"
+              placeholder="•••••••••"
+              maxlength="25"
+            />
+
+            <!-- submit -->
+            <input type="submit" name="submit" value="Entrar" />
+          </form>
+        </section>
+
+        <!-- botão para navegar até o modal de cadastro -->
+        <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
+      </div>
+    </dialog>
+
+    <!-- modal para form de cadastro -->
+    <dialog id="modal-2">
+      <div class="modal-container">
+        <section class="title">
+          <h1>Cadastre-se</h1>
+          <button class="close-modal" data-modal="modal-2">x</button>
+        </section>
+
+        <section class="form-cadastro">
+          <form action="../src/signup.php" method="POST">
+            <!-- username -->
+            <label for="username"> Nickname </label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Nickname"
+              maxlength="25"
+              required
+            />
+
+            <!-- email -->
+            <label for="email"> E-mail </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="Seu melhor e-mail"
+              maxlength="25"
+              required
+            />
+            <!-- Aqui inserimos o valor da variável em um atributo data-* para pegar o valor de $variable do php para o js -->
+            <span
+              id="emailMessage"
+              style="display: none"
+              data-variable="<?php echo $variable; ?>"
+            ></span>
+
+            <!-- senha -->
+            <label for="senha">Senha </label>
+            <input
+              type="password"
+              name="senha"
+              placeholder="•••••••••"
+              maxlength="25"
+              required
+            />
+
+            <!-- submit -->
+            <input type="submit" name="submit" value="Entrar" />
+          </form>
+        </section>
+
+        <button class="nav-modal" data-modal="modal-1">Acesse</button>
+      </div>
+    </dialog>
+
+    <!-- Section hero -->
+    <main>
+      <!-- Background hero -->
+      <div id="background">
+        <video loop autoplay muted>
+          <source src="video/video-hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <section class="hero-site">
+        <div class="interface">
+          <article class="hero__area">
+            <section class="hero__area-txt">
+              <p>Tenha seus pedidos personalizados</p>
+              <h1><span>Loot Box</span>Geek</h1>
+              <p>
+                Melhor que loot de boss raid: caixas cheias de tech,
+                <span>games e geekices pra chamar de suas! </span>
+              </p>
+              <button class="btn-default">
+                <a href="#">saiba mais</a>
+              </button>
+            </section>
+
+            <section class="hero__area-img">
+              <img
+                src="./img/index/blusa_geek_pixel-removebg-preview.png"
+                class="tamanho img1"
+              />
+              <img
+                src="./img/index/console_portatil_pixel-removebg-preview.png"
+                alt="console-icon"
+                class="tamanho img2"
+              />
+              <img
+                src="./img/index/controle_retro_pixel-removebg-preview.png"
+                alt="controle-icon"
+                class="tamanho img3"
+              />
+              <img
+                src="./img/global/logo-removebg-preview.png"
+                alt="pc-flutuante"
+                class="pc-flutuante"
+              />
+              <!-- img da sombra (faltando) esqueci de pegar no pc de casa-->
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section -> Destaques -->
+      <section class="destaques">
+        <div class="interface">
+
+          <div class="destaques__titulo">            
+            <h2 class="titulo-destaque">Destaques Geek</h2>
+          </div>
+
+          <article class="destaques__container">
+
+            <div class="destaques__container-item">
+              <img
+                src="./img/index/camisa do batman.webp"
+                alt="roupa"
+                class="principal"
+              />
+              <h3>Roupas</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+
+            <div class="destaques__container-item">
+              <img src="./img/index/camisa do batman.webp" class="principal" />
+              <h3>Brindes</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+
+            <div class="destaques__container-item">
+              <img src="./img/index/camisa do batman.webp" alt="copo" class="principal" />
+              <h3>Copos</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+
+          </article>
+        </div>
+      </section>
+
+
+
+    </main>
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
