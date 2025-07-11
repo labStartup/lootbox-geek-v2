@@ -161,7 +161,44 @@ header .btn-modal button {
 /* /HERO */
 
 /* SECTION DESTAQUES */
+.destaques{
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-primary);
+}
 
+.destaques__container{
+    display: flex;
+    /* background-color: rgba(255, 228, 196, 0.575); */
+    justify-content: space-around;
+    padding: 20px;
+    gap: 30px;
+}
+
+.destaques__container-item{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #b88a34;
+    box-shadow: 5px 5px 15px #242323;
+}
+
+/* por uma div, colocar position absoluta, para sair da estilização do pai e deixar o texto na caixa */
+.txt{
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+/* /o que falei a cima */
+
+.principal{
+    padding: 10px;
+    border-radius: 15px;
+    width: 290px;
+    height: 320px;
+}
 
 /* /SECTION DESTAQUES */
 
