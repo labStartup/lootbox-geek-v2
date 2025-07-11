@@ -1,5 +1,6 @@
 /* Importar style global */
 @import url('./global.css');
+@import url('./login.css');
 
 /* HEADER */
 header {
@@ -163,3 +164,4 @@ header .btn-modal button {
 
 
 /* /SECTION DESTAQUES */
+

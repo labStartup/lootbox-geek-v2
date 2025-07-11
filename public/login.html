@@ -1,0 +1,74 @@
+<!-- Esta é uma subpágina da index -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- /Bootstrap Icon -->
+  <title>Login | Lootbox Geek</title>
+ 
+</head>
+
+<body class="no-scroll">
+  <header>
+    <div class="interface">
+      <section class="logo">
+        <img src="./img/global/logo-removebg-preview.png" alt="logotipo" id="logo_header" />
+      </section>
+
+      <section class="btn-modal">
+        <button class="btn-default return">
+          <a href="./index.html">Retornar</a>
+        </button>
+      </section>
+    </div>
+  </header>
+  <!-- /navbar -->
+
+  <!-- Conteúdo principal -->
+  <section class="login">
+    
+    <form action="">
+
+      <h2>Login</h2>
+
+      <div class="login__input">
+        <span class="login__input__icon">
+          <i class="bi bi-envelope-at"></i>
+        </span>
+        <input type="text" name="email" maxlength="25" required/>
+        <label for="email">E-mail </label>
+      </div>
+
+      <div class="login__input">
+        <span class="login__input__icon icon-password">
+          <i class="bi bi-key-fill"></i>
+        </span>
+        <input type="password" name="senha"  maxlength="25" required/>
+        <label for="senha">Senha </label>
+      </div>
+
+      <div class="remember-forgot">
+        <label>
+          <input type="checkbox">Lembrar
+        </label>
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+      <input type="submit" value="Enviar" name="enviar">
+      <div class="register-link">
+        <p>Não tem uma conta? <a href="./cadastro.html">Cadastre-se</a></p>
+      </div>
+
+    
+    </form>
+    <div class="overlay"></div>
+  </section>
+
+  <!-- Footer -->
+</body>
+
+</html>

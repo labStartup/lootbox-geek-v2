@@ -2,6 +2,8 @@
 :root{
     --bg-primary: #F2B138;
     --bg-secundary: #b88934;
+    --white-basic: #f0f0f0;
+    --white-basic-transp: #f0f0f0e8;
 }
 
 /* Estilos Globais */
@@ -30,5 +32,25 @@ body {
     height: 50px;
     font-size: 18px;
     cursor: pointer;
+}
+
+/* Estilo para não ter scroll do mouse na tag aplicada */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Estilo para botões de sair */
+.return{
+    background-color: crimson !important;
+}
+
+/* Estilo de <body> de páginas que não tem scroll -> páginas que tem 100vh total */
+/* Aplica-se a todos menos a tag header */
+body.no-scroll > *:not(header){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
 }
 

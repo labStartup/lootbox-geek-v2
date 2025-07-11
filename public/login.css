@@ -1,0 +1,144 @@
+@import url('./global.css');
+
+/* Container de login */
+.login{
+    background: url('./img/index/bg2-login.jpeg') center / cover no-repeat;
+
+    position: relative;
+    
+}
+
+/* Overlay para escurecer a imagem do container */
+.login > .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000009f;
+}
+
+/* Estilos do Formulário */
+.login form{
+  
+  width: 400px;
+  height: 500px;
+  background-color: var(--white-basic-transp);
+  border: 3px solid var(--bg-primary);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 2;
+}
+
+.login form h2{
+  font-size: 2em;
+  color: var(--bg-secundary);
+  text-align: center;
+}
+
+.login__input{
+  position: relative;
+  
+  width: 310px;
+  margin: 25px 0 30px;
+  border-bottom: 2px solid var(--bg-primary);
+}
+
+.login__input label{
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  transform: translateY(-45%);
+  font-size: 1em;
+  font-weight: 500;
+  color: #1d1c1c;
+  pointer-events: none;
+  transition: .6s ease-in;
+}
+
+.login__input input:focus~label, .login__input input:valid~label{ 
+  top: -2px;
+}
+
+.login__input input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #1d1c1c;
+  padding: 0 50px 0 5px;
+}
+
+.login__input .login__input__icon {
+  position: absolute;
+  right: 20px;
+  color: var(--bg-secundary);
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.remember-forgot{
+  width: 80%;
+  margin: -15px 0 15px;
+  font-size: .9em;
+  color: #1d1c1c;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input{
+  margin-right: 3px;
+  cursor: pointer;  
+}
+
+.remember-forgot a{
+  color: var(--bg-secundary);
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+form input[type="submit"]{
+  width: 80%;
+  height: 40px;
+  
+  background-color: var(--bg-primary);
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #1d1c1c;
+  font-weight: 700;
+  transition: .6s ease-out;
+
+  &:hover{
+    background-color: #1d1c1c;
+    color: var(--bg-primary);
+  }
+}
+
+.register-link{
+  font-size: .9em;
+  color: var(--bg-secundary);
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a{
+  color: var(--bg-secundary);
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
