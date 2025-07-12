@@ -1,0 +1,248 @@
+@import url('./global.css');
+
+/* ESTRUTURA PRINCIPAL */
+main.sobre-nos {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* SEÇÃO INTRODUÇÃO */
+.sobre-nos_intro {
+  text-align: center;
+  color: #242323;
+  margin-bottom: 60px;
+}
+
+.sobre-nos_intro h1 {
+  font-size: 2.5em;
+  color: var(--bg-primary);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.sobre-nos_intro p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8em;
+}
+
+/* MISSÃO, VISÃO E VALORES */
+.missao-visao-valores {
+  margin-bottom: 60px;
+}
+
+.missao-visao-valores h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--bg-primary);
+  margin-bottom: 40px;
+}
+
+.missao-visao-valores .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.missao-visao-valores article {
+  flex: 1;
+  min-width: 280px;
+  background-color: var(--bg-secundary);
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.missao-visao-valores article:hover {
+  transform: translateY(-5px);
+  background-color: #ececec;
+  color: var(--bg-primary);
+}
+
+.missao-visao-valores h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.missao-visao-valores p, .missao-visao-valores ul {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.missao-visao-valores ul {
+  padding-left: 20px;
+}
+
+/* HISTÓRIA */
+.historia {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.historia h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--bg-primary);
+  margin-bottom: 20px;
+}
+
+.historia p {
+  font-size: 1.1em;
+  line-height: 1.8em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* EQUIPE */
+.equipe {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.equipe h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--bg-primary);
+  margin-bottom: 40px;
+}
+
+.membros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.membro {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.membro img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.membro h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: var(--bg-primary);
+}
+
+.membro p {
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* PARCERIAS */
+.parcerias {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.parcerias h2 {
+  font-size: 2em;
+  color: var(--bg-primary);
+  margin-bottom: 20px;
+}
+
+.parcerias p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  max-width: 150px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos img:hover {
+  filter: grayscale(0%);
+}
+
+/* CTA FINAL */
+.cta {
+  background-color: var(--bg-primary);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.cta .botao {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--bg-secundary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .botao:hover {
+  background-color: #fff;
+  color: var(--bg-primary);
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .missao-visao-valores .grid,
+  .membros,
+  .logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membro, .missao-visao-valores article {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .sobre-nos_intro h1,
+  .historia h2,
+  .equipe h2,
+  .parcerias h2,
+  .cta h2 {
+    font-size: 1.8em;
+  }
+}
