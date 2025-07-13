@@ -14,5 +14,8 @@
     // else{
     //     echo mysqli_connect_errno($conn);
     // }
+    if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
 
 ?>
