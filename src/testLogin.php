@@ -36,7 +36,10 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
         header('Location: ../public/system.php');
         exit;
     } else {
-        header('Location: ../public/index.php');
+        // significa que senha email correto mas senha incorreta.
+        // Criar sessão para mensagem de senha incorreta:
+        $_SESSION['senha_incorreta'] = true;
+        header('Location: ../public/login.php');   
         exit;
     }
 } else {

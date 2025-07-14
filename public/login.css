@@ -144,15 +144,49 @@ form input[type="submit"]{
 }
 
 /* MODAL SUCESS */
-dialog#modalSucesso{
+dialog#modalSucesso, dialog#senhaIncorreta{
   background-color: var(--bg-primary);
   border: 2px solid var(--bg-secundary);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0 ,0, 0.2);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  animation: aparecer 0.3s ease-out;
+
+  p{
+    font-size: 1.2em;
+  
+    span{
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+
+  .btnFechar{
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    background-color: #e6e6e6; /* Um cinza mais escuro que o branco translúcido */
+    font-size: 1.2em;
+    color: var(--bg-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover{
+      background-color: var(--bg-secundary);
+      color: #fff;
+      /* font-weight: 800; */
+      border: 2px solid var(--white-basic-transp);
+    }
+  }
 }
 
-dialog#modalSucesso::backdrop{
-  background-color: rgba(0, 0, 0, 1);
+dialog#modalSucesso::backdrop, dialog#senhaIncorreta::backdrop{
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
 
 
 /* Animação opcional */

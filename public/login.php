@@ -1,9 +1,12 @@
 <?php
 session_start();
 // verifica se usuário veio da página de cadastro, vai abrir um modal para dizer que o cadastro foi bem sucedido:
-// $mostrarModal = isset($_SESSION['cadastro_sucesso']) && $_SESSION['cadastro_sucesso'] === true;
+$mostrarModal = isset($_SESSION['cadastro_sucesso']) && $_SESSION['cadastro_sucesso'] === true;
 unset($_SESSION['cadastro_sucesso']); // impede que mostre ao recarregar
-$mostrarModal = true;
+
+// Controle de senha incorreta (testLogin.php);
+$senha_incorreta = isset($_SESSION['senha_incorreta']) && $_SESSION['senha_incorreta'] === true;
+unset($_SESSION['senha_incorreta']);
 ?>
 <!-- Esta é uma subpágina da index -->
 <!DOCTYPE html>
@@ -75,36 +78,60 @@ $mostrarModal = true;
     <div class="overlay"></div>
   </section>
 
-  <!-- Span para controlar o modal login -->
+  <!-- Span para controlar os modais login -->
   <section class="m-login">
     <span id="verificadorCadastro" data-verif="<?= $mostrarModal ? 'true' : 'false' ?>"></span>
 
 
     <dialog id="modalSucesso">
-      <p>Cadastro realizado com sucesso! Agora vamos logar?</p>
-      <button id="btnFechar">OK</button>
+      <p>Cadastro realizado com sucesso! <span>Agora vamos logar?</span></p>
+      <button class="btnFechar">OK</button>
     </dialog>
 
+    <span id="verificadorSenha" data-verif="<?= $senha_incorreta ? 'true' : 'false' ?>"></span>
+
+    <dialog id="senhaIncorreta">
+      <p>Senha Incorreta, tente novamente!</p>
+      <button class="btnFechar">Ok</button>
+    </dialog>
+
+
   </section>
+
+
 
   <!-- Footer -->
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const verificador = document.getElementById('verificadorCadastro');
-      const modal = document.getElementById('modalSucesso');
-      const btnFechar = document.getElementById('btnFechar');
+      const modal1 = document.getElementById('modalSucesso');
+      const btnFechar = document.querySelectorAll('.btnFechar');
 
       if (verificador?.dataset.verif === 'true') {
-        modal.showModal();
+        modal1.showModal();
 
         // Descomente o código abaixo se quiser que o modal fique aberto por um tempo de 10s:
         // setTimeout(() => {
         //   if (modal.open) modal.close();
         // }, 10000);
-
-        btnFechar.addEventListener('click', () => modal.close());
       }
+
+      // Verificar se senha está incorreta:
+      const verificadorSenha = document.getElementById("verificadorSenha");
+      const modal2 = document.getElementById("senhaIncorreta");
+
+      if (verificadorSenha?.dataset.verif === 'true') {
+        modal2.showModal();
+      }
+
+      btnFechar.forEach(button => {
+
+        button.addEventListener('click', () => {
+          if (modal1) modal1.close();
+          if (modal2) modal2.close();
+        });
+      });
     });
   </script>
 
