@@ -24,7 +24,7 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
         // Destruir qualquer sessão criada:
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
-        header('Location: ../public/index.html');
+        header('Location: ../public/index.php');
         exit;
     }
 
@@ -36,7 +36,7 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
         header('Location: ../public/system.php');
         exit;
     } else {
-        header('Location: ../public/index.html');
+        header('Location: ../public/index.php');
         exit;
     }
 } else {
