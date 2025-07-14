@@ -31,11 +31,11 @@
 
       <section class="menu-desktop__btn">
           <button class="btn-default">
-            <a href="./login.html">login</a>
+            <a href="./login.php">login</a>
           </button>
 
           <button class="btn-default">
-            <a href="./cadastro.html">cadastre-se</a>
+            <a href="./cadastro.php">cadastre-se</a>
           </button>
         </section>
     </div>

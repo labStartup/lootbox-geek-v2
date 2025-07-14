@@ -1,6 +1,7 @@
 /* Criando Variáveis */
 :root{
     --bg-primary: #F2B138;
+    --bg-primary-header: #f2b138d5;
     --bg-secundary: #b88934;
     --white-basic: #f0f0f0;
     --white-basic-transp: #f0f0f0e8;
@@ -28,9 +29,9 @@ body{
 
 /* Estilo de botão padrão */
 .btn-default {
-    width: 120px;
-    height: 50px;
-    font-size: 18px;
+    width: 110px;
+    height: 33px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -58,8 +59,8 @@ body.no-scroll > *:not(header){
 /* HEADER DAS PÁGINAS ANTES DE LOGAR */
 header {
     width: 100%;
-    padding: 40px 0;
-    background-color: var(--bg-primary);
+    padding: 22px 0;
+    background-color: var(--bg-primary-header);
 }
 
 header .interface {
@@ -70,7 +71,7 @@ header .interface {
 }
 
 header .logo img {
-    max-width: 70px;
+    max-width: 60px;
 }
 
 header .menu-desktop nav ul {

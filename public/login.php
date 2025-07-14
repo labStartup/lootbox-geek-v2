@@ -15,7 +15,7 @@ unset($_SESSION['senha_incorreta']);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./login.css">
   <!-- Bootstrap Icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <!-- /Bootstrap Icon -->
@@ -95,12 +95,11 @@ unset($_SESSION['senha_incorreta']);
       <button class="btnFechar">Ok</button>
     </dialog>
 
-
   </section>
-
-
-
   <!-- Footer -->
+  <!-- <?php
+        include_once "./index__footer.php";
+        ?> -->
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {

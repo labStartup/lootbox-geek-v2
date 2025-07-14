@@ -19,76 +19,94 @@ unset($_SESSION['existe_email']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./cadastro.css">
     <title>Cadastro | Loot box Geek</title>
-    <style>
-        a {
-            font-size: 2em;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
-<body>
-    <h1>Formulário de cadastro</h1>
+<body class="no-scroll">
+    <header>
+        <div class="interface">
+            <section class="logo">
+                <img src="./img/global/logo-removebg-preview.png" alt="logotipo" id="logo_header" />
+            </section>
 
-    <a href="index.html" style="display: block" ;>inicio</a>
-    <a href="login.php">login</a>
+            <section>
+                <button class="btn-default return">
+                    <a href="./index.html">Retornar</a>
+                </button>
+            </section>
+        </div>
+    </header>
+    <!-- /navbar -->
 
-    <form action="../src/signup.php" method="POST" enctype="multipart/form-data">
+    <!-- Conteúdo principal -->
+    <section class="cadastro">
 
-        <!-- username -->
-        <label for="username">
-            Nickname </label>
-        <input
-            type="text"
-            name="username"
-            placeholder="Nickname"
-            maxlength="25"
-            required>
+        <form action="../src/signup.php" method="POST" enctype="multipart/form-data">
 
-        <!-- email -->
-        <label for="email">
-            E-mail </label>
-        <input type="text"
-            name="email"
-            placeholder="Seu melhor e-mail"
-            maxlength="25"
-            required>
+            <h2>Cadastro</h2>
+            
+            <!-- username -->
+            <div class="cadastro__input">
+                <input
+                type="text"
+                name="username"
+                maxlength="25"
+                required>
+                <label for="username">
+                    Nickname </label>
+            </div>
 
-        <!-- Span para indicar que existe email cadastrado -->
-        <span id="existeEmail" data-existe="<?= $existe_email ? 'true' : 'false' ?>" style="display: none">Já existe email cadastrado, tente outro!</span>
+            <!-- email -->
+            <div class="cadastro__input">
+                <input type="text"
+                    name="email"
+                    maxlength="25"
+                    required>
+                <label for="email">
+                    E-mail </label>
+            </div>
 
-        <!-- senha -->
-        <label for="senha">Senha </label>
-        <input
-            type="password"
-            name="senha"
-            placeholder="•••••••••"
-            maxlength="25"
-            required>
+            <!-- Span para indicar que existe email cadastrado -->
+            <span id="existeEmail" data-existe="<?= $existe_email ? 'true' : 'false' ?>" style="display: none">Já existe email cadastrado, tente outro!</span>
+            <!-- senha -->
 
-        <!-- confirmar senha -->
-        <label for="confirmar_senha">Confirmar senha </label>
-        <input
-            type="password"
-            name="confirmar_senha"
-            placeholder="•••••••••"
-            maxlength="25"
-            required>
+            <div class="cadastro__input">
+                <input
+                    type="password"
+                    name="senha"
+                    maxlength="25"
+                    required>
+                <label for="senha">Senha </label>
+            </div>
 
-        <!-- Span para senhas incompatíveis -->
-        <span id="verificadorSenha" data-verif="<?= $senhas_diferentes ? 'true' : 'false'?>" style="display:none">As senhas não são iguais.</span>
+            <!-- confirmar senha -->
+            <div class="cadastro__input">
+                <input
+                    type="password"
+                    name="confirmar_senha"
+                    maxlength="25"
+                    required>
+                <label for="confirmar_senha">Confirmar senha </label>
+            </div>
+            
+            <!-- Span para senhas incompatíveis -->
+            <span id="verificadorSenha" data-verif="<?= $senhas_diferentes ? 'true' : 'false' ?>" style="display:none">As senhas não são iguais.</span>
+            <!-- imagem -->
 
-        <!-- imagem -->
-        <label>Selecione a imagem</label>
-        <input
-            type="file"
-            name="imagem"
-            accept="image/*" class="form-control" />
 
-        <!-- submit -->
-        <input type="submit" name="submit" value="entrar">
-    </form>
+            <div class="cadastro__input-imagem">
+                <label>Selecione a imagem</label>
+                <input
+                    type="file"
+                    name="imagem"
+                    accept="image/*" class="form-control" />
+            </div>
+            <!-- submit -->
+            <input type="submit" name="submit" value="Cadastrar">
+        </form>
+        <div class="overlay"></div>
+    </section>
 
     <!-- script para controlar mensagem de email já cadastrado -->
     <script>
@@ -102,7 +120,7 @@ unset($_SESSION['existe_email']);
         // ################################# //
         // Verificar se senhas são iguais:
         const spanSenhas = document.getElementById("verificadorSenha");
-        if (spanSenhas.dataset.verif === 'true'){
+        if (spanSenhas.dataset.verif === 'true') {
             spanSenhas.style.display = 'inline';
         }
 

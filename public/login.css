@@ -2,10 +2,8 @@
 
 /* Container de login */
 .login{
-    background: url('./img/index/bg2-login.jpeg') center / cover no-repeat;
-
-    position: relative;
-    
+    background: url('./img/index/sasuke.jpg') center / cover no-repeat;
+    position: relative;    
 }
 
 /* Overlay para escurecer a imagem do container */
@@ -20,17 +18,16 @@
 
 /* Estilos do Formulário */
 .login form{
-  
   width: 400px;
   height: 500px;
-  background-color: var(--white-basic-transp);
+  background-color: rgba(240, 248, 255, 0.1);
+  backdrop-filter: blur(10px);
   border: 3px solid var(--bg-primary);
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   z-index: 2;
 }
 
@@ -42,7 +39,7 @@
 
 .login__input{
   position: relative;
-  
+  background-color: transparent;
   width: 310px;
   margin: 25px 0 30px;
   border-bottom: 2px solid var(--bg-primary);
@@ -55,7 +52,7 @@
   transform: translateY(-45%);
   font-size: 1em;
   font-weight: 500;
-  color: #1d1c1c;
+  color: var(--bg-primary);
   pointer-events: none;
   transition: .6s ease-in;
 }
@@ -87,7 +84,7 @@
   width: 80%;
   margin: -15px 0 15px;
   font-size: .9em;
-  color: #1d1c1c;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
 }
@@ -109,7 +106,6 @@
 form input[type="submit"]{
   width: 80%;
   height: 40px;
-  
   background-color: var(--bg-primary);
   border: none;
   border-radius: 30px;
@@ -132,6 +128,14 @@ form input[type="submit"]{
   text-align: center;
   margin: 25px 0 10px;
 }
+
+/* ver e corrigir */
+.register-link p{
+  color: #ffffff;
+  text-decoration: none;
+  /* font-weight: 700; */
+}
+/* /ver e corrigir */
 
 .register-link p a{
   color: var(--bg-secundary);
@@ -200,5 +204,4 @@ dialog#modalSucesso::backdrop, dialog#senhaIncorreta::backdrop{
     transform: scale(1);
   }
 }
-
 /* /MODAL SUCESS */
