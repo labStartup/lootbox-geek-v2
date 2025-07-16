@@ -31,7 +31,7 @@ if (
 
     // Verificar se há email cadastrado no banco de dados, na tabela `user_registration`:
     $_SESSION['existe_email'] = false; //Variável de controle.
-    $sql = "SELECT * FROM user_registration2 WHERE email = '$signup_email'";
+    $sql = "SELECT * FROM user_registration WHERE email = '$signup_email'";
     $result = mysqli_query($conn, $sql);
 
     // Se o $result[num_rows] for > 0, significa que existe usuário com este email cadastrado 
@@ -54,7 +54,7 @@ if (
     }
 
     // Prepara o INSERT com proteção contra SQL Injection
-    $stmt = $conn->prepare("INSERT INTO user_registration2 (username, email, password_login, image_user) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO user_registration (username, email, password_login, image_user) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $signup_user, $signup_email, $senhaHash, $imagem);
 
     // Executa e verifica se deu certo

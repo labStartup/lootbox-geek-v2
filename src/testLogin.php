@@ -13,7 +13,7 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
     $senha = trim($_POST['senha']);
 
     // Agora vamos fazer uma verificação se há este email e senha cadastrados na nossa base de dados
-    $stmt = $conn->prepare("SELECT * FROM user_registration2 WHERE email = ?");
+    $stmt = $conn->prepare("SELECT * FROM user_registration WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();

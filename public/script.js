@@ -1,7 +1,3 @@
-/* index.php */
-
-/* /index.php */
-
 /* ************************************************************************ */
 /* store */
 const botao_menu_lateral = document.getElementById('botao-menu-lateral')
@@ -45,13 +41,3 @@ botao_menu_lateral.addEventListener('click', botao => {
         menu_lateral_ativado = false
     }
 })
-
-/* /store */
-/* ********************************************************************* */
-
-/* login.php */
-
-
-
-/* /login.php */
-

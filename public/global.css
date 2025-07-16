@@ -1,27 +1,36 @@
+/* Importações */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+    font-family: "tipo1";
+    src: url("./fonts/Super-Mario-Maker-Font.woff");
+}
+
 /* Criando Variáveis */
-:root{
-    --bg-primary: #F2B138;
-    --bg-primary-header: #f2b138d5;
+:root {
+    --bg-primary: #f2b138;
     --bg-secundary: #b88934;
     --white-basic: #f0f0f0;
     --white-basic-transp: #f0f0f0e8;
+    --new-bg: #d99f2f;
 }
 
 /* Estilos Globais */
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter Tight", sans-serif, Arial, Helvetica;
 }
 
-body{
+body {
     /* width: 100vw; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--bg-primary);
+    position: relative;
 }
 
-.interface{
+.interface {
     max-width: 1280px;
     /* padding: 20px; */
     margin: 0 auto;
@@ -29,10 +38,10 @@ body{
 
 /* Estilo de botão padrão */
 .btn-default {
-    width: 110px;
-    height: 33px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 18px;
     cursor: pointer;
+    color: #fff;
 }
 
 /* Estilo para não ter scroll do mouse na tag aplicada */
@@ -41,26 +50,29 @@ body{
 }
 
 /* Estilo para botões de sair */
-.return{
+.return {
     background-color: crimson !important;
 }
 
 /* Estilo de <body> de páginas que não tem scroll -> páginas que tem 100vh total */
 /* Aplica-se a todos menos a tag header */
-body.no-scroll > *:not(header){
+body.no-scroll>*:not(header) {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
 }
+
 /* ####################################################################### */
 
 /* HEADER DAS PÁGINAS ANTES DE LOGAR */
 header {
     width: 100%;
-    padding: 22px 0;
-    background-color: var(--bg-primary-header);
+    padding: 40px 0;
+    /* background-color: var(--bg-primary); */
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 240, 210, 0.15));
 }
 
 header .interface {
@@ -70,8 +82,17 @@ header .interface {
     height: 10px;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
 header .logo img {
-    max-width: 60px;
+    max-width: 70px;
+}
+
+header h2.title__logo {
+    font-family: tipo1, "Inter Tight", sans-serif, Arial, Helvetica;
 }
 
 header .menu-desktop nav ul {
@@ -80,40 +101,52 @@ header .menu-desktop nav ul {
 
 header .menu-desktop nav ul li {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 15px;
 }
 
 header .menu-desktop nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #242323;
     font-size: 16px;
     font-weight: 600;
+    transition: transform 0.3s ease-out;
+}
+
+header .menu-desktop nav ul li a:hover {
+    transform: translateY(-5px);
 }
 
 header .menu-desktop__btn {
     display: flex;
-    gap: 50px;
+    gap: 13px;
 }
 
-header .menu-desktop__btn button {
+header .menu-desktop__btn a {
+    text-decoration: none;
+
+    i {
+        display: inline-block;
+        font-size: 1.2em;
+        color: var(--bg-primary);
+        background-color: transparent;
+    }
+}
+
+/* Estilo para os ícone (login e Cadastro)  */
+header .menu-desktop__btn a i {
+    border-radius: 20px;
+    color: #000000;
     background-color: transparent;
-    background-color: var(--bg-secundary);
-    border: 2px solid var(--bg-secundary);
-    transition: .3s ease-in-out;
+    padding: 8px;
+    transition: background-color 1s ease-out;
+}
 
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    &:hover{
-        background-color: #ececec;
-        border: none;
-        
-        a{
-            color: var(--bg-primary);
-        }
-    }
+header .menu-desktop__btn a:hover i {
+    background-color: #116e1769;
+    border: none;
+    /* color: #000000; */
+    border-radius: 26px 8px;
 }
 
 /* /HEADER DAS PÁGINAS ANTES DE LOGAR */
@@ -122,12 +155,14 @@ header .menu-desktop__btn button {
 /* FOOTER DAS PÁGINAS ANTES DE LOGAR */
 
 .f__index {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9em;
-  background-color: #eee;
-  color: #666;
+    width: 100%;
+    text-align: center;
+    /* padding: 40px 0; */
+    font-size: 0.9em;
+    background-color: #eee;
+    color: #666;
+    position: absolute;
+    bottom: 0;
 }
 
 /* /FOOTER DAS PÁGINAS ANTES DE LOGAR */
-

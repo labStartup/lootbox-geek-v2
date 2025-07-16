@@ -3,10 +3,14 @@
 /* ESTRUTURA PRINCIPAL */
 main.sobre-nos {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.menu-desktop__btn .btn-default a {
+  color: black;
+  text-decoration: none; /* opcional, remove o sublinhado */
+}
 
 /* SEÇÃO INTRODUÇÃO */
 .sobre-nos_intro {
@@ -15,9 +19,13 @@ main.sobre-nos {
   margin-bottom: 60px;
 }
 
+.img__sobre{
+  height: 250px;
+}
+
 .sobre-nos_intro h1 {
   font-size: 2.5em;
-  color: var(--bg-primary);
+  color: black;
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -53,7 +61,7 @@ main.sobre-nos {
   flex: 1;
   min-width: 280px;
   background-color: var(--bg-secundary);
-  color: #fff;
+  color: #333;
   padding: 30px;
   border-radius: 8px;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -61,8 +69,9 @@ main.sobre-nos {
 
 .missao-visao-valores article:hover {
   transform: translateY(-5px);
-  background-color: #ececec;
-  color: var(--bg-primary);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* color: var(--bg-primary); */
+  color: #dadada;
 }
 
 .missao-visao-valores h3 {
@@ -88,7 +97,7 @@ main.sobre-nos {
 .historia h2 {
   font-size: 2em;
   font-weight: 700;
-  color: var(--bg-primary);
+  /* color: var(--bg-primary); */
   margin-bottom: 20px;
 }
 
@@ -108,7 +117,7 @@ main.sobre-nos {
 .equipe h2 {
   font-size: 2em;
   font-weight: 700;
-  color: var(--bg-primary);
+  color: #111;
   margin-bottom: 40px;
 }
 
@@ -117,15 +126,22 @@ main.sobre-nos {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  color: black;
 }
 
 .membro {
-  background-color: #fff;
+  background-color: transparent;
   padding: 20px;
   border-radius: 8px;
   width: 280px;
+  background-color: var(--bg-secundary);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: black;
+}
+
+a {
+  color: #242323;
 }
 
 .membro:hover {
@@ -134,17 +150,19 @@ main.sobre-nos {
 }
 
 .membro img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .membro h3 {
   font-size: 1.2em;
   margin-bottom: 5px;
-  color: var(--bg-primary);
+  color: black;
 }
 
 .membro p {
@@ -215,7 +233,7 @@ main.sobre-nos {
   text-decoration: none;
   font-weight: 600;
   border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .cta .botao:hover {
