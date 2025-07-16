@@ -32,7 +32,7 @@ unset($_SESSION['existe_email']);
 
             <section>
                 <button class="btn-default return">
-                    <a href="./index.html">Retornar</a>
+                    <a href="./index.php">Retornar</a>
                 </button>
             </section>
         </div>
@@ -42,7 +42,7 @@ unset($_SESSION['existe_email']);
     <!-- Conteúdo principal -->
     <section class="cadastro">
 
-        <form action="../src/signup.php" method="POST" enctype="multipart/form-data">
+        <form action="../src/signup.php" method="POST" enctype="multipart/form-data" autocomplete="off">
 
             <h2>Cadastro</h2>
             

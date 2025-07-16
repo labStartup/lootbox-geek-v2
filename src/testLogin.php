@@ -33,7 +33,7 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
     if (password_verify($senha, $user['password_login'])) {
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        header('Location: ../public/system.php');
+        header('Location: ../public/store.php');
         exit;
     } else {
         // significa que senha email correto mas senha incorreta.

@@ -32,7 +32,7 @@ unset($_SESSION['senha_incorreta']);
 
       <section>
         <button class="btn-default return">
-          <a href="./index.html">Retornar</a>
+          <a href="./index.php">Retornar</a>
         </button>
       </section>
     </div>
@@ -42,7 +42,7 @@ unset($_SESSION['senha_incorreta']);
   <!-- Conteúdo principal -->
   <section class="login">
 
-    <form action="../src/testLogin.php" method="post">
+    <form action="../src/testLogin.php" method="post" autocomplete="off">
 
       <h2>Login</h2>
 

@@ -5,7 +5,7 @@
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
     unset($_SESSION['variable']);
-    header("Location: ../public/index.html");
+    header("Location: ../public/index.php");
 
     $conn->close();
 ?>
