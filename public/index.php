@@ -58,13 +58,13 @@ include './index__header.php';
         </div>
 
         <div class="destaques__container-item">
-          <img src="./img/index/camisa do batman.webp" class="principal" />
+          <img src="./img/index/index_destaque_1brinde.jpg" class="principal" />
           <h3>Brindes</h3>
           <p class="text"><span>IMPORTANTE:</span> Todos os brindes vêm com um toque de ironia e 0% de garantia de que vão melhorar sua vida. Mas hey, é de graça! (Ou quase.)</p>
         </div>
 
         <div class="destaques__container-item">
-          <img src="./img/index/camisa do batman.webp" alt="copo" class="principal" />
+          <img src="./img/index/index_destaque_1caneca.jpg" alt="copo" class="principal" />
           <h3>Canecas</h3>
           <p class="text">Feita especialmente pra quem joga online. <span>Beba Café</span>, última resistência antes do colapso mental.</p>
         </div>
