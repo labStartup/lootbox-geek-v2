@@ -33,16 +33,32 @@ if (isset($_POST['enviar']) && !empty($_POST['email']) && !empty($_POST['senha']
     if (password_verify($senha, $user['password_login'])) {
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
+
+        // Estrutura para pegar image_user e username da tabela user_registration
+        $stmt = $conn->prepare("SELECT username, image_user FROM user_registration WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+
+        // Obtem o resultado da consulta
+        $result = $stmt->get_result();
+
+        // Extrai os dados como array associativo
+        $data = mysqli_fetch_assoc($result);
+
+        $_SESSION['username'] = $data['username'];
+        $_SESSION['image_user'] = $data['image_user'];
+
+
+
         header('Location: ../public/store.php');
         exit;
     } else {
         // significa que senha email correto mas senha incorreta.
         // Criar sessão para mensagem de senha incorreta:
         $_SESSION['senha_incorreta'] = true;
-        header('Location: ../public/login.php');   
+        header('Location: ../public/login.php');
         exit;
     }
 } else {
     echo 'Não acessou meu sistema';
 }
-?>

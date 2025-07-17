@@ -2,6 +2,22 @@
     session_start();
     include_once '../src/config.php';
 
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        // Usuário acessou sem email e senha no login.
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: ../public/index.php');
+        exit;
+    }
+
+    if(isset($_SESSION['username']) && isset($_SESSION['image_user']) && !empty($_SESSION['username']) && !empty($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+        $image_user = $_SESSION['image_user'];
+
+    }
+
     $quantidade = array_sum($_SESSION['carrinho'] ?? []); 
 
     // Consulta para pegar produtos ativos de acordo com as categorias
@@ -46,15 +62,16 @@
     <link rel="stylesheet" href="style_store.css" media="all">
     <link rel="stylesheet" href="media_queries.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./img/_outros/info-perfil.png" type="image/x-icon">
     <title>Store</title>
 </head>
 
 <body>
     <aside id="menu-lateral">
         <div id="perfil">
-            <img src="img/_outros/info-perfil.png" alt="Informação da Conta" width="45">
+            <img src="<?= $image_user ?>" alt="Informação da Conta" width="45">
             <div id="info">
-                <p>Olá, <em>Usuário!</em></p>
+                <p>Olá, <em><?= ucfirst($username) ?></em></p>
                 <a href="carrinho.php" target="_self"> Carrinho: <span id="badge-carrinho"><?= $quantidade ?></span></a>
             </div>
         </div>

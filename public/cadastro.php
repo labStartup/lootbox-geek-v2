@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Controle de senhas: 
+// Controle de senhas: Se existe a sessão 'senhas iguais' e se ela for false, $senhas_diferentes recebem true.
 $senhas_diferentes = isset($_SESSION['senhas_iguais']) && $_SESSION['senhas_iguais'] === false;
 unset($_SESSION['senhas_iguais']);
 
@@ -52,6 +52,7 @@ unset($_SESSION['existe_email']);
                 type="text"
                 name="username"
                 maxlength="25"
+                autocomplete="off"
                 required>
                 <label for="username">
                     Nickname </label>
@@ -62,13 +63,14 @@ unset($_SESSION['existe_email']);
                 <input type="text"
                     name="email"
                     maxlength="25"
+                    autocomplete="off"
                     required>
                 <label for="email">
                     E-mail </label>
             </div>
 
             <!-- Span para indicar que existe email cadastrado -->
-            <span id="existeEmail" data-existe="<?= $existe_email ? 'true' : 'false' ?>" style="display: none">Já existe email cadastrado, tente outro!</span>
+            <span id="existeEmail" data-existe="<?= $existe_email ? 'true' : 'false' ?>" style="display: none; color: #fff;">Já existe email cadastrado, tente outro!</span>
             <!-- senha -->
 
             <div class="cadastro__input">
@@ -76,6 +78,7 @@ unset($_SESSION['existe_email']);
                     type="password"
                     name="senha"
                     maxlength="25"
+                    autocomplete="off"
                     required>
                 <label for="senha">Senha </label>
             </div>
@@ -86,6 +89,7 @@ unset($_SESSION['existe_email']);
                     type="password"
                     name="confirmar_senha"
                     maxlength="25"
+                    autocomplete="off"
                     required>
                 <label for="confirmar_senha">Confirmar senha </label>
             </div>
@@ -122,6 +126,7 @@ unset($_SESSION['existe_email']);
         const spanSenhas = document.getElementById("verificadorSenha");
         if (spanSenhas.dataset.verif === 'true') {
             spanSenhas.style.display = 'inline';
+            spanSenhas.style.color = '#fff';
         }
 
         // ################################# //

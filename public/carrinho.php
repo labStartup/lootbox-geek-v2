@@ -121,6 +121,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Carrinho de Compras</title>
   <link rel="stylesheet" href="style_carrinho.css" media="all">
+  <link rel="shortcut icon" href="./img/_outros/info-perfil.png" type="image/x-icon">
   <script src="script.js" defer></script>
 </head>
 
