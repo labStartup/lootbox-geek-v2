@@ -24,9 +24,9 @@ include './index__header.php';
             Melhor que loot de boss raid: caixas cheias de tech,
             <span>games e geekices pra chamar de suas! </span>
           </p>
-          <button class="btn-default">
+          <!-- <button class="btn-default">
             <a href="#">saiba mais</a>
-          </button>
+          </button> -->
         </section>
 
         <section class="hero__area-img">
@@ -53,24 +53,44 @@ include './index__header.php';
 
         <div class="destaques__container-item">
           <img src="./img/index/camisa do batman.webp" alt="roupa" class="principal" />
-          <h3>Roupas</h3>
-          <p class="text">Blazers oversized para estilo urbano, calças cargo com bolsos funcionais e vestidos midi
-            elegantes. Cropped tops despojadas e tênis chunky completam os looks.</p>
+          <h3>Camisas Personalizadas</h3>
+          <p class="text">A roupa não muda o mundo, mas garante que ninguém te confunda com um NPC.</p>
         </div>
 
         <div class="destaques__container-item">
           <img src="./img/index/camisa do batman.webp" class="principal" />
           <h3>Brindes</h3>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <p class="text"><span>IMPORTANTE:</span> Todos os brindes vêm com um toque de ironia e 0% de garantia de que vão melhorar sua vida. Mas hey, é de graça! (Ou quase.)</p>
         </div>
 
         <div class="destaques__container-item">
           <img src="./img/index/camisa do batman.webp" alt="copo" class="principal" />
-          <h3>Copos</h3>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <h3>Canecas</h3>
+          <p class="text">Feita especialmente pra quem joga online. <span>Beba Café</span>, última resistência antes do colapso mental.</p>
         </div>
 
       </article>
+    </div>
+  </section>
+
+  <!-- Section -> Eventos -->
+  <section id="eventos">
+    <h2 class="eventos__titulo">Eventos</h2>
+    <div class="eventos__content">
+      <img src="img/index/mario_memory_game.png" alt="jogo" class="eventos__jogo">
+      <p class="eventos__descrip">Como Funciona:
+        ✅ Acertou TUDO sem perder nenhuma vida?
+        → Cupom "ÓTIMO" + Brinde Surpresa! 🎉
+        <br>
+        😅 Acertou tudo, mas perdeu algumas vidas?
+        → Cupom "+-" para uma vantagem na próxima!
+        <br>
+        😢 Perdeu todas as vidas?
+        → Não desista! Tente novamente e mostre que você é o verdadeiro campeão do Mário!
+        <br>
+        ⏳ Tempo Limitado!
+        Os prêmios são por tempo limitado, então não perca a chance!
+      </p>
     </div>
   </section>
 
@@ -163,7 +183,7 @@ include './index__header.php';
               divertido... por uns 3 segundos."</p>
             <div class="slide__txt">
               <img src="./img/index/client-3.jpg" alt="">
-              <h2>Saitama-sama </h2>
+              <h2>Saitama </h2>
             </div>
             <div class="slide__txt-stars">
               <i class="bi bi-star-fill"></i>
@@ -190,5 +210,5 @@ include './index__header.php';
 
 <!-- Incluir footer -->
 <?php
-  include_once "./index__footer.php";
+include_once "./index__footer.php";
 ?>

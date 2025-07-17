@@ -1,7 +1,7 @@
 <?php
-  // título da página:
-  $titulo = "Sobre Nós | Loot box Geek";
-  include './index__header.php';
+// título da página:
+$titulo = "Sobre Nós | Loot box Geek";
+include './index__header.php';
 ?>
 
 <main class="sobre-nos">
@@ -40,54 +40,118 @@
     <section class="equipe">
       <h2>Conheça a Equipe</h2>
       <div class="membros">
+        <!-- Romisson Oliveira -->
         <article class="membro">
           <img src=".\img\about\devs\Romisson.jpg" alt="Romisson - Programador Back-End" />
           <h3>Romisson</h3>
           <p>Programador Back-End</p>
-          <p>Email: <a href="mailto:romisson@email.com">romisson@email.com</a></p>
-          <p>GitHub: <a href="https://github.com/romisson" target="_blank">github.com/romisson</a></p>
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:oliveiraromisson@hotmail.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/romisson-oliveira" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
         </article>
+        <!-- Anderson Malheiros -->
         <article class="membro">
           <img src=".\img\about\devs\Anderson Malheiros 1.jpg" alt="Anderson - Programador Front-End" />
           <h3>Anderson</h3>
           <p>Programador Front-End</p>
-          <p>Email: <a href="mailto:anderson.malheiros.am@gmail.com">anderson.malheiros.am@gmail.com</a></p>
-          <p>GitHub: <a href="https://github.com/anderson" target="_blank">github.com/anderson</a></p>
+
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:oliveiraromisson@hotmail.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/anderson" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
         </article>
+        <!-- Iago Souza -->
         <article class="membro">
           <img src=".\img\about\devs\Iago Souza.jpg" alt="Iago - Programador GPT" />
           <h3>Iago</h3>
           <p>Programador GPT</p>
-          <p>Email: <a href="mailto:iagosouza56@hotmail.com">iagosouza56@hotmail.com</a></p>
-          <p>GitHub: <a href="https://github.com/iago" target="_blank">github.com/iago</a></p>
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:iagosouza56@hotmail.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/iago" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
         </article>
+        <!-- Victor Silva -->
         <article class="membro">
           <img src=".\img\about\devs\Victor.jpg" alt="Victor - Programador Back-End e Front-End" />
           <h3>Victor</h3>
           <p>Programador Full Stack</p>
-          <p>Email: <a href="mailto:victor@email.com">victor@email.com</a></p>
-          <p>GitHub: <a href="https://github.com/victor" target="_blank">github.com/victor</a></p>
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:victor@email.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/victor" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
         </article>
+        <!-- Samuel Serra -->
         <article class="membro">
           <img src=".\img\about\devs\Samuel.jpg" alt="Samuel - Programador Front-End" />
           <h3>Samuel</h3>
           <p>Programador Front-End</p>
-          <p>Email: <a href="mailto:samuel@email.com">samuel@email.com</a></p>
-          <p>GitHub: <a href="https://github.com/samuel" target="_blank">github.com/samuel</a></p>
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:samuel@email.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/samuel" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <!-- Fabrício Amorim -->
         </article>
         <article class="membro">
           <img src=".\img\about\devs\Fabrício.jpg" alt="Fabrício - Programador Back-End" />
           <h3>Fabrício</h3>
           <p>Programador Back-End</p>
-          <p>Email: <a href="mailto:fabricio@email.com">fabricio@email.com</a></p>
-          <p>GitHub: <a href="https://github.com/fabricio" target="_blank">github.com/fabricio</a></p>
+          <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:fabricio@email.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/fabricio" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
+        <!-- Wilson Lins -->
         </article>
         <article class="membro">
           <img src=".\img\about\devs\Wilson.jpg" alt="Wilson - Programador Back-End" />
           <h3>Wilson</h3>
           <p>Programador Back-End</p>
-          <p>Email: <a href="mailto:wilson@email.com">wilson@email.com</a></p>
-          <p>GitHub: <a href="https://github.com/wilson" target="_blank">github.com/wilson</a></p>
+                    <div class="membro__links">
+            <i class="bi bi-envelope">
+              <a href="mailto:wilson@email.com"></a>
+            </i>
+            <i class="bi bi-github">
+              <a href="https://github.com/wilson" target="_blank"></a>
+            </i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-whatsapp"></i>
+          </div>
         </article>
       </div>
     </section>

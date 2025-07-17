@@ -15,7 +15,7 @@
         <style>
             header .menu-desktop a,
             header .menu-desktop__btn i {
-                color: #fff !important;
+                color: #242323 !important;
             }
         </style>
     <?php endif; ?>
@@ -35,7 +35,7 @@
                     <ul>
                         <li><a href="index.php">início</a></li>
                         <li><a href="./index.php#destaques">destaques</a></li>
-                        <li><a href="#">eventos</a></li>
+                        <li><a href="./index.php#eventos">eventos</a></li>
                         <li><a href="./sobrenos.php">sobre nós</a></li>
                     </ul>
                 </nav>

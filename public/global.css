@@ -68,11 +68,11 @@ body.no-scroll>*:not(header) {
 /* HEADER DAS PÁGINAS ANTES DE LOGAR */
 header {
     width: 100%;
-    padding: 40px 0;
-    /* background-color: var(--bg-primary); */
-    background: linear-gradient(to bottom right,
+    padding: 32px 0;
+    background-color: var(--new-bg);
+    /* background: linear-gradient(to bottom right,
             rgba(255, 255, 255, 0.4),
-            rgba(255, 240, 210, 0.15));
+            rgba(255, 240, 210, 0.15)); */
 }
 
 header .interface {
@@ -88,7 +88,7 @@ header .logo {
 }
 
 header .logo img {
-    max-width: 70px;
+    max-width: 64px;
 }
 
 header h2.title__logo {

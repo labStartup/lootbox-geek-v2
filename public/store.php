@@ -67,11 +67,12 @@
 </head>
 
 <body>
+    <div class="fundo-escuro"></div>
     <aside id="menu-lateral">
         <div id="perfil">
             <img src="<?= $image_user ?>" alt="Informação da Conta" width="45">
             <div id="info">
-                <p>Olá, <em><?= ucfirst($username) ?></em></p>
+                <p>Olá, <em><?= ucfirst($username) ?>!</em></p>
                 <a href="carrinho.php" target="_self"> Carrinho: <span id="badge-carrinho"><?= $quantidade ?></span></a>
             </div>
         </div>
@@ -89,10 +90,12 @@
         </nav>
     </aside>
     <button id="botao-menu-lateral" title="Mostrar Menu"></button>
-    <!--<div id="busca">
-        <input type="search" id="campo-busca" placeholder="Fazer uma busca...">
+
+    <div id="busca">
+        <button id="botao-limpar" title="Limpar filtro">Limpar busca</button>
         <button id="botao-busca" title="Buscar produtos">Buscar</button>
-    </div> -->
+        <input type="search" id="campo-busca" placeholder="Fazer uma busca pela loja">
+    </div>
 
     <main>
         <div id="mensagem-feedback" class="feedback" style="display: none;"></div>
@@ -106,7 +109,6 @@
                 <figure class="produto" data-id="<?= $row['id'] ?>">
                     <img src="<?= htmlspecialchars($p['imagem']) ?>" alt="<?= htmlspecialchars($p['nome']) ?>">
                     <figcaption>
-                        <?= htmlspecialchars($p['categoria']) ?> -
                         <?= htmlspecialchars($p['nome']) ?> <br><br>
                         <strong>R$ <?= number_format($p['preco'], 2, ',', '.') ?></strong>
                         <br><span class="estoque">Disponível: <?= htmlspecialchars($p['quantidade_disponivel']) ?> unidade(s)</span>
@@ -114,7 +116,7 @@
 
                     <div class="botoes">
                         <?php if ($p['quantidade_disponivel'] == 0): ?>
-                            <span style="display: block; margin: auto; color: #dfdfdf;">Produto em falta.</span>
+                            <span style="display: block; margin: auto; color: #333;">Produto em falta.</span>
                         <?php else: ?>
 
                         <button
@@ -136,21 +138,21 @@
     </main>
 
     <div id="moedas-container">
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="45"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="60"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="65"></div>
         <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
         <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="40"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="40"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="35"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="40"></div>
         <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
         <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
-        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="50"></div>
+        <div class="moeda"><img src="img/_outros/coin.png" alt="Moeda" width="70"></div>
     </div>   
 </body>
 </html>

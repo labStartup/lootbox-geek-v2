@@ -29,7 +29,7 @@
 
     // Quantidade atual no carrinho
     $qtdNoCarrinho = $_SESSION['carrinho'][$id] ?? 0;
-    $adicionado    = false;
+    $adicionado = false;
 
     // Lógica de adicionar ou remover com checagem de estoque
     if ($acao === 'add') {

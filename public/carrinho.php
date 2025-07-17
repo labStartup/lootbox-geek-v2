@@ -89,6 +89,7 @@
           ON p.categoria_id = c.id
       WHERE p.id IN ($in)
       ";
+
       $res = $conn->query($sql);
 
     while ($row = $res->fetch_assoc()) {
@@ -109,7 +110,6 @@
 
         $produtosNoCarrinho[] = $row;
     }
-
   }
 ?>
 
